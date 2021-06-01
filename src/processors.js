@@ -425,7 +425,7 @@ define([
         /* keeping old code for local version of scss if we ever want it again */
         // getScript(jsbin.static + '/js/vendor/codemirror3/mode/sass/sass.js', function () {
         // Sass.initialize(jsbin.static + '/js/vendor/sass/dist/worker.min.js');
-      handler: throttle(debounceAsync(function sass(source, resolve, reject, done) {
+      handler: jsbin.throttle(jsbin.debounceAsync(function sass(source, resolve, reject, done) {
         $.ajax({
           type: 'post',
           url: '/processor',
@@ -471,7 +471,7 @@ define([
       init: function (ready) {
         getScript(jsbin.static + '/js/vendor/codemirror5/mode/sass/sass.js', ready);
       },
-      handler: throttle(debounceAsync(function (source, resolve, reject, done) {
+      handler: jsbin.throttle(jsbin.debounceAsync(function (source, resolve, reject, done) {
         $.ajax({
           type: 'post',
           url: '/processor',
