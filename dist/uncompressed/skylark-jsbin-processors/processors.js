@@ -710,8 +710,9 @@ define([
           resolve(msg + ProjectWriter.write(res));
         }
       });
-    }())
+    }()),
 
+    defaultProcessor
   };
 
   var formatErrors = function(res) {

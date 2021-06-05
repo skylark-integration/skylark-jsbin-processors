@@ -805,8 +805,9 @@ define('skylark-jsbin-processors/processors',[
           resolve(msg + ProjectWriter.write(res));
         }
       });
-    }())
+    }()),
 
+    defaultProcessor
   };
 
   var formatErrors = function(res) {
